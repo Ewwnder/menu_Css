@@ -1,43 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>Menu - Faça A Sua Escolha</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Menu - Faça A Sua Escolha</h1>
-    </header>
-
-    <main>
-        <section id="pratos-principais">
-            <h2>Prato Principal</h2>
-            <p>Todos os pratos acompanham arroz, feijão e a sobremesa do dia.</p>
-            <div class="pratos-container">
-                
+    <div class="container">
+        <div class="menu-header">
+            <img src="img/home.jpg" alt="Menu de pratos">
+        </div>
+        <h2 class="menu-title">Menu - Faça A Sua Escolha</h2>
+        <div class="menu-box">
+            <h3>Prato Principal</h3>
+            <p class="texto">Todos os pratos acompanham arroz, feijão e a sobremesa do dia.</p><br>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="img/bife.jpg" alt="Bife com Batata">
+                    <p>Bife com batata</p>
+                    <p class="price">R$ 30,00</p>
+                    <div class="quantity">
+                        <button onclick="changeQuantity('bife', -1)">-</button>
+                        <input type="text" id="bife" value="0" readonly>
+                        <button onclick="changeQuantity('bife', 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/coxa.jpg" alt="Coxa de Frango Crocante">
+                    <p>Coxa de Frango Crocante</p>
+                    <p class="price">R$ 25,00</p>
+                    <div class="quantity">
+                        <button onclick="changeQuantity('frango', -1)">-</button>
+                        <input type="text" id="frango" value="0" readonly>
+                        <button onclick="changeQuantity('frango', 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/panela.jpg" alt="Carne de Panela">
+                    <p>Carne de Panela</p>
+                    <p class="price">R$ 22,00</p>
+                    <div class="quantity">
+                        <button onclick="changeQuantity('carne', -1)">-</button>
+                        <input type="text" id="carne" value="0" readonly>
+                        <button onclick="changeQuantity('carne', 1)">+</button>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <section id="acompanhamentos">
-            <h2>Acompanhamentos</h2>
-            <p>Porções para uma pessoa</p>
-            <div class="acompanhamentos-container">
-                
-            </div>
-        </section>
-
-        <section id="dados-pessoais">
-            <h2>Dados Pessoais</h2>
-            <form>
-                <input type="text" placeholder="Nome" required>
-                <input type="tel" placeholder="Telefone" required>
-                <input type="email" placeholder="E-mail" required>
-                <button type="submit">Calcular</button>
-            </form>
-        </section>
-
-    </main>
 </body>
 </html>
