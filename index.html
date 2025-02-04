@@ -48,6 +48,47 @@
                 </div>
             </div>
         </div>
+
+        <div class="menu-box">
+            <h3>Acompanhamentos</h3>
+            <p class="texto">Porções para uma pessoa</p><br>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="img/farofa.jpg" alt="Bife com Batata">
+                    <p>Farofa</p>
+                    <p class="price">R$ 10,00</p>
+                    <div class="quantity">
+                        <button onclick="changeQuantity('bife', -1)">-</button>
+                        <input type="text" id="bife" value="0" readonly>
+                        <button onclick="changeQuantity('bife', 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/salad.jpg" alt="Coxa de Frango Crocante">
+                    <p>Salada</p>
+                    <p class="price">R$ 8,00</p>
+                    <div class="quantity">
+                        <button onclick="changeQuantity('frango', -1)">-</button>
+                        <input type="text" id="frango" value="0" readonly>
+                        <button onclick="changeQuantity('frango', 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/torresmo.jpg" alt="Carne de Panela">
+                    <p>Torresmo</p>
+                    <p class="price">R$ 12,00</p>
+                    <div class="quantity">
+                        <button onclick="changeQuantity('carne', -1)">-</button>
+                        <input type="text" id="carne" value="0" readonly>
+                        <button onclick="changeQuantity('carne', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+
     </div>
 
 </body>
