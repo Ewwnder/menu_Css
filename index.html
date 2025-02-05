@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Faça A Sua Escolha</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -12,9 +14,10 @@
             <img src="img/home.jpg" alt="Menu de pratos">
         </div>
         <h2 class="menu-title">Menu - Faça A Sua Escolha</h2>
+        
         <div class="menu-box">
             <h3>Prato Principal</h3>
-            <p class="texto">Todos os pratos acompanham arroz, feijão e a sobremesa do dia.</p><br>
+            <p class="texto">Todos os pratos acompanham arroz, feijão e a sobremesa do dia.</p>
             <div class="menu-items">
                 <div class="menu-item">
                     <img src="img/bife.jpg" alt="Bife com Batata">
@@ -51,57 +54,52 @@
 
         <div class="menu-box">
             <h3>Acompanhamentos</h3>
-            <p class="texto">Porções para uma pessoa</p><br>
+            <p class="texto">Porções para uma pessoa</p>
             <div class="menu-items">
                 <div class="menu-item">
-                    <img src="img/farofa.jpg" alt="Bife com Batata">
+                    <img src="img/farofa.jpg" alt="Farofa">
                     <p>Farofa</p>
                     <p class="price">R$ 10,00</p>
                     <div class="quantity">
-                        <button onclick="changeQuantity('bife', -1)">-</button>
-                        <input type="text" id="bife" value="0" readonly>
-                        <button onclick="changeQuantity('bife', 1)">+</button>
+                        <button onclick="changeQuantity('farofa', -1)">-</button>
+                        <input type="text" id="farofa" value="0" readonly>
+                        <button onclick="changeQuantity('farofa', 1)">+</button>
                     </div>
                 </div>
                 <div class="menu-item">
-                    <img src="img/salad.jpg" alt="Coxa de Frango Crocante">
+                    <img src="img/salad.jpg" alt="Salada">
                     <p>Salada</p>
                     <p class="price">R$ 8,00</p>
                     <div class="quantity">
-                        <button onclick="changeQuantity('frango', -1)">-</button>
-                        <input type="text" id="frango" value="0" readonly>
-                        <button onclick="changeQuantity('frango', 1)">+</button>
+                        <button onclick="changeQuantity('salada', -1)">-</button>
+                        <input type="text" id="salada" value="0" readonly>
+                        <button onclick="changeQuantity('salada', 1)">+</button>
                     </div>
                 </div>
                 <div class="menu-item">
-                    <img src="img/torresmo.jpg" alt="Carne de Panela">
+                    <img src="img/torresmo.jpg" alt="Torresmo">
                     <p>Torresmo</p>
                     <p class="price">R$ 12,00</p>
                     <div class="quantity">
-                        <button onclick="changeQuantity('carne', -1)">-</button>
-                        <input type="text" id="carne" value="0" readonly>
-                        <button onclick="changeQuantity('carne', 1)">+</button>
+                        <button onclick="changeQuantity('torresmo', -1)">-</button>
+                        <input type="text" id="torresmo" value="0" readonly>
+                        <button onclick="changeQuantity('torresmo', 1)">+</button>
                     </div>
                 </div>
             </div>
         </div>
 
-       <div class="dados-box">
+        <div class="dados-box">
             <h3>Dados Pessoais</h3>
             <input type="text" id="nome" placeholder="Digite seu nome">
-
             <input type="text" id="telefone" placeholder="Digite seu telefone">
-
             <input type="text" id="endereco" placeholder="Digite seu endereço">
-            
-        </div> 
+        </div>
 
-        <button class="calc">Calcular</button>
-
-        
-
-
+        <button class="calc" onclick="calcularPedido()">Calcular</button>
+        <div id="resultado" class="resultado-box" style="display:none;"></div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>

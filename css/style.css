@@ -2,23 +2,30 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #C5C1C0;
+    margin: 0;
+    padding: 0;
 }
+
 .container {
     width: 80%;
+    max-width: 900px;
     margin: auto;
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .menu-header img {
     width: 100%;
 }
+
 .menu-title {
     font-size: 24px;
     font-weight: bold;
     margin: 20px 0;
 }
+
 .menu-box {
     background: #F5F5F5;
     padding: 20px;
@@ -27,18 +34,13 @@ body {
     margin-top: 20px;
 }
 
-.dados-box{
-    background: #F5F5F5;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
-}
 .menu-items {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
+
 .menu-item {
     background: linear-gradient(#FFF, #F5F5F5);
     padding: 8px;
@@ -47,21 +49,25 @@ body {
     text-align: center;
     width: 200px;
 }
+
 .menu-item img {
-    width: 100%
+    width: 100%;
 }
+
 .price {
     font-weight: bold;
     color: green;
     font-size: 1em;
 }
+
 .quantity {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 1px;
+    margin-top: 5px;
 }
+
 .quantity button {
     background: #FFF;
     color: #000;
@@ -71,27 +77,12 @@ body {
     cursor: pointer;
     border-radius: 5px;
 }
+
 .quantity input {
     width: 30px;
     text-align: center;
-    border: 0px solid #F5F5F5;
+    border: none;
     background-color: #F5F5F5;
-}
-
-p.texto{
-    font-weight: bold;
-    font-size: 0.9em;
-}
-
-p{
-    font-size: 0.7em;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: bold;
-}
-
-h3{
-    margin-top: 1px;
 }
 
 .dados-box {
@@ -129,4 +120,29 @@ h3{
 
 .calc:hover {
     background-color: #0050A5;
+}
+
+#resultado {
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .menu-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item {
+        width: 90%;
+    }
 }
