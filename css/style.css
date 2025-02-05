@@ -26,6 +26,14 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-top: 20px;
 }
+
+.dados-box{
+    background: #F5F5F5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
 .menu-items {
     display: flex;
     justify-content: center;
@@ -84,4 +92,41 @@ p{
 
 h3{
     margin-top: 1px;
+}
+
+.dados-box {
+    background: #F5F5F5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.dados-box input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.calc {
+    background-color: #0068DA;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.calc:hover {
+    background-color: #0050A5;
 }
